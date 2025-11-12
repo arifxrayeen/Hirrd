@@ -1,28 +1,40 @@
-# Full Stack Job Portal with React JS, Tailwind CSS, Supabase, Clerk, Shadcn UI Tutorial 🔥🔥
+# Hirrd - Full Stack Job Portal 🚀
 
-A modern job portal application built with React, Vite, Tailwind CSS, Supabase, and Clerk authentication.
+A modern, full-stack job portal application built with React, Tailwind CSS, Supabase, and Clerk Authentication.
 
-## 🚀 Live Demo
+## 🌐 Live Demo
+[Deploy on Vercel/Netlify - See DEPLOYMENT.md for instructions]
 
-[View Live Site](https://your-deployed-url.vercel.app) *(Update after deployment)*
-
-## 📋 Features
-
-- 🔐 User Authentication (Clerk)
-- 💼 Job Posting & Management
-- 📝 Job Applications
-- 💾 Saved Jobs
-- 🎨 Modern UI with Tailwind CSS
-- 📱 Responsive Design
+## 📁 Repository
+**GitHub:** https://github.com/arifxrayeen/Hirrd
 
 ## 🛠️ Tech Stack
+- **Frontend:** React.js, Vite, Tailwind CSS
+- **UI Components:** Shadcn UI, Radix UI
+- **Backend:** Supabase (PostgreSQL)
+- **Authentication:** Clerk
+- **State Management:** React Hooks
+- **Form Handling:** React Hook Form, Zod
 
-- **Frontend**: React, Vite, Tailwind CSS
-- **Backend**: Supabase
-- **Authentication**: Clerk
-- **UI Components**: Shadcn UI
+## ✨ Features
+- 🔐 User Authentication (Sign up/Login with Clerk)
+- 👤 Role-based Access (Candidate/Recruiter)
+- 📝 Job Posting (For Recruiters)
+- 🔍 Job Search & Filtering
+- 💼 Job Applications Management
+- ⭐ Save Jobs Feature
+- 📄 Resume Upload
+- 🎨 Modern UI/UX with Dark Mode
 
-## 📦 Installation
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- Supabase account
+- Clerk account
+
+### Installation
 
 1. Clone the repository
 ```bash
@@ -42,48 +54,47 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 ```
 
-4. Run development server
+4. Set up Supabase Database
+- Run `database_setup.sql` in Supabase SQL Editor
+- Run `database_setup_fix.sql` for RLS policies
+- Create storage buckets: `company-logo` and `resumes` (both public)
+
+5. Configure Clerk
+- Create JWT template named `supabase` (see CLERK_SETUP.md)
+
+6. Run the development server
 ```bash
 npm run dev
 ```
 
-## 🗄️ Database Setup
-
-1. Run the SQL script in Supabase SQL Editor: `database_setup.sql`
-2. Run the fix script: `database_setup_fix.sql`
-3. Create storage buckets: `company-logo` and `resumes` (both public)
-
-See `SUPABASE_SETUP.md` for detailed instructions.
-
-## 🚀 Deployment
-
-See `DEPLOYMENT_GUIDE.md` for detailed deployment instructions.
-
-### Quick Deploy to Vercel:
-
-1. Push code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Add environment variables
-5. Deploy!
-
 ## 📚 Documentation
+- [Supabase Setup Guide](SUPABASE_SETUP.md)
+- [Clerk Setup Guide](CLERK_SETUP_SIMPLE.md)
+- [Storage Setup](STORAGE_SETUP.md)
+- [Deployment Guide](DEPLOYMENT.md)
 
-- [Supabase Setup Guide](./SUPABASE_SETUP.md)
-- [Clerk Setup Guide](./CLERK_SETUP_SIMPLE.md)
-- [Storage Setup](./STORAGE_SETUP.md)
-- [Deployment Guide](./DEPLOYMENT_GUIDE.md)
+## 📖 Project Structure
+```
+src/
+├── api/           # API functions for Supabase
+├── components/    # React components
+├── pages/         # Page components
+├── hooks/         # Custom React hooks
+├── utils/         # Utility functions
+└── layouts/       # Layout components
+```
+
+## 🎓 Capstone Project
+This project is developed as a college capstone project demonstrating full-stack web development skills.
 
 ## 👨‍💻 Author
-
 **Arif Xrayeen**
 - Email: arif.22scse1120013@galgotiasuniversity.edu.in
 - GitHub: [@arifxrayeen](https://github.com/arifxrayeen)
 
 ## 📄 License
+This project is open source and available for educational purposes.
 
-This project is for educational purposes (Capstone Project).
-
----
-
-**Made with ❤️ for Galgotias University**
+## 🙏 Acknowledgments
+- Original tutorial: [Piyush Eon](https://www.youtube.com/watch?v=2XF-HgauItk)
+- Based on the job portal tutorial project
