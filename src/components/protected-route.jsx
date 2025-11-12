@@ -14,8 +14,16 @@ const ProtectedRoute = ({ children }) => {
     user !== undefined &&
     !user?.unsafeMetadata?.role &&
     pathname !== "/onboarding"
-  )
-    return <Navigate to="/onboarding" />;
+  ) {
+    // Map pathname to redirect parameter
+    let redirectParam = "";
+    if (pathname === "/jobs") {
+      redirectParam = "?redirect=jobs";
+    } else if (pathname === "/post-job") {
+      redirectParam = "?redirect=post-job";
+    }
+    return <Navigate to={`/onboarding${redirectParam}`} />;
+  }
 
   return children;
 };
