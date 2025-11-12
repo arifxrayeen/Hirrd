@@ -9,9 +9,9 @@ const AppLayout = () => {
         <Header />
         <Outlet />
       </main>
-      <div className="p-10 text-center bg-gray-800 mt-10">
-        Made with 💗 by Arif Rayeen 
-      </div>
+      <footer className="p-10 text-center bg-gray-800 mt-10 text-white">
+        <p className="text-lg">Made with 💗 by Arif Rayeen</p>
+      </footer>
     </div>
   );
 };
